@@ -134,4 +134,4 @@ export hi="hello ${test}"
 eval "$(rbenv init -)"
 export PATH="/opt/homebrew/opt/protobuf@3/bin:$PATH:$GOPATH/bin"
 alias nvc='cd ~/.config/nvim && nvim .'
-alias gitd='/usr/bin/git --git-dir=/Users/alexho/.dotfiles/ --work-tree=/Users/alexho'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
