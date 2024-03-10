@@ -19,7 +19,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion.
+# Uncomment the following line to usm hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
@@ -100,38 +100,25 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export VI_MODE_SET_CURSOR=true
+
+# NVM setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Load secrets
-source ~/.zshsecrets
-
-# MIGRATED FROM OLD COMP
+if [ -e ~/.zshrc_local ]
+then
+  source ~/.zshrc_local
+fi
 
 # Aliases
 alias nuke='docker stop $(docker container ls -q) || docker system prune -a --volumes'
-alias docker-itui-yalc-upgrade='docker compose run --rm bp-client yarn upgrade @stashinvest/internal-tooling-ui'
+alias nvc='cd ~/.config/nvim && nvim .'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# go setup
-export ARTIFACTORY_USER=alex.ho@stash.com
-export GOPATH="$HOME/go"
-export GOPROXY="https://${ARTIFACTORY_USER}:${ARTIFACTORY_TOKEN}@stash.jfrog.io/artifactory/api/go/stash-core-go"
-# export GONOPROXY="none"
-# export GONOSUMDB="github.com/stash-core/*,github.com/StashInvest/*"
-export GOPRIVATE="github.com/stash-core/*,github.com/stashinvest/*,github.com/stashInvest/*,github.com/StashInvest/*"
-export GOLANG_NETRC="machine github.com login alexanderkho password ${GITHUB_PACKAGE_REGISTRY_TOKEN}"
-
-export VI_MODE_SET_CURSOR=true
 
 export test=foo
 export hi="hello ${test}"
 
-# TODO: is this needed
-# export NODE_EXTRA_CA_CERTS=~/.ssh/ZscalerRootCA.pem
-
-
-eval "$(rbenv init -)"
-export PATH="/opt/homebrew/opt/protobuf@3/bin:$PATH:$GOPATH/bin"
-alias nvc='cd ~/.config/nvim && nvim .'
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
