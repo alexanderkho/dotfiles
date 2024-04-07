@@ -117,6 +117,7 @@ fi
 alias nuke='docker stop $(docker container ls -q) || docker system prune -a --volumes'
 alias nvc='cd ~/.config/nvim && nvim .'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias ntmux='nvim ~/.tmux.conf'
 
 
 export test=foo
