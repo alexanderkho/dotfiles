@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [[ -z "${TMUX}" ]]; then
+	echo "ahoy! 🤠"
+else
+	echo "ahoy from tmux! 🤓"
+fi

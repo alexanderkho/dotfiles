@@ -123,3 +123,11 @@ alias ntmux='nvim ~/.tmux.conf'
 export test=foo
 export hi="hello ${test}"
 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
+# Add custom scripts to path
+export PATH=$HOME/.local/scripts:$PATH
+
+bindkey -s ^f "tmux-sessionizer\n"
+
