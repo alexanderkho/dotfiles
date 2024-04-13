@@ -2,10 +2,25 @@
 # Adapted from:
 # https://github.com/ThePrimeagen/.dotfiles/blob/602019e902634188ab06ea31251c01c1a43d1621/bin/.local/scripts/tmux-sessionizer
 
+# not all of these exist on all machines
+dirsToCheck=(
+	$HOME/Projects
+	$HOME/dev
+	$HOME/dev/other
+	$HOME/dev/personal
+	$CORE_DIRECTORY
+)
+dirsToFzf=()
+for dir in "${dirsToCheck[@]}"; do
+	if [ -d "$dir" ]; then
+		dirsToFzf+=("$dir")
+	fi
+done
+
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(find ~/Projects ~/dev ~/dev/other ~/dev/personal/ $CORE_DIRECTORY -mindepth 1 -maxdepth 1 -type d | fzf)
+	selected=$(find "${dirsToFzf[@]}" -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
