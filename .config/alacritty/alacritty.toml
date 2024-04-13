@@ -1,0 +1,25 @@
+# UwU :3 hiiii~
+
+# Font configuration
+[font]
+
+normal.family = "CaskaydiaCove Nerd Font Mono"
+bold.family = "CaskaydiaCove Nerd Font Mono"
+italic.family = "CaskaydiaCove Nerd Font Mono"
+bold_italic.family = "CaskaydiaCove Nerd Font Mono"
+
+size = 15.0
+
+[window]
+
+decorations = "None"
+opacity = 0.8
+decorations_theme_variant = "Dark"
+
+[env]
+
+TERM = "xterm-256color"
+
+[mouse]
+
+hide_when_typing = true
