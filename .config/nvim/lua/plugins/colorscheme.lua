@@ -8,7 +8,7 @@ return {
     opts = {},
   },
   { "rebelot/kanagawa.nvim" },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim" },
   { "rose-pine/neovim", name = "rose-pine" },
   { "oxfist/night-owl.nvim" },
 
@@ -23,7 +23,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "tokyonight",
-      colorscheme = "night-owl",
+      colorscheme = "tokyonight-storm",
     },
   },
 }

@@ -118,6 +118,8 @@ alias nuke='docker stop $(docker container ls -q) || docker system prune -a --vo
 alias nvc='cd ~/.config/nvim && nvim .'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ntmux='nvim ~/.tmux.conf'
+alias nzshrc='nvim ~/.zshrc'
+alias nalac='nvim ~/.config/alacritty/alacritty.toml'
 
 
 export test=foo
