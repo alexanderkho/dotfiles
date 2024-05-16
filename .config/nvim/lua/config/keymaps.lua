@@ -7,3 +7,6 @@ vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC
 
 -- exit all
 vim.keymap.set("c", "Q", "%bd|q|y", { noremap = true })
+
+-- exit all but current buffer
+vim.keymap.set("c", "W", "%bd|e#", { noremap = true })
