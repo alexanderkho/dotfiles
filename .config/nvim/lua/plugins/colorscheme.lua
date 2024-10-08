@@ -24,6 +24,7 @@ return {
     opts = {
       -- colorscheme = "tokyonight",
       colorscheme = "onedark_vivid",
+      -- colorscheme = "onelight",
     },
   },
 }
