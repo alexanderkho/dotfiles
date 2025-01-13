@@ -12,7 +12,7 @@ size = 16.0
 
 [window]
 
-decorations = "None"
+decorations = "Buttonless"
 opacity = 0.8
 decorations_theme_variant = "Dark"
 
@@ -26,4 +26,7 @@ hide_when_typing = true
 
 [keyboard]
 
-bindings = [{key="Escape", mods="Control", action="ToggleViMode"}]
+bindings = [
+  {key="Escape", mods="Control", action="ToggleViMode"},
+  {key="T", mods="Command", action="None"}
+]
